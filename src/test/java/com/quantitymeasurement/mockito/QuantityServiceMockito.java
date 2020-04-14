@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -31,6 +32,11 @@ public class QuantityServiceMockito {
 
     @MockBean
     private QuantityService service;
+
+    @Test
+    public void contexLoads() throws Exception {
+        assertThat(mvc).isNotNull();
+    }
 
     @Test
     public void whenCalledForMainUnits_ShouldReturnMainUnits() throws Exception {
