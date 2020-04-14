@@ -21,5 +21,4 @@ public class HTTPRequestMockito {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/" + "units",
                 String.class)).contains("LENGTH", "WEIGHT", "VOLUME", "TEMPERATURE");
     }
-
 }
