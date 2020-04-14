@@ -25,9 +25,9 @@ public class LayerTesting {
     private MockMvc mockMvc;
 
     @Test
-    public void shouldReturnDefaultMessage() throws Exception {
+    public void shouldReturnUnits() throws Exception {
         Units[] expectedArray = {LENGTH, WEIGHT, VOLUME, TEMPERATURE};
-        this.mockMvc.perform(get("/units"))
+        mockMvc.perform(get("/units"))
                 .andExpect(content().json(Arrays.toString(expectedArray)));
     }
 }

@@ -47,7 +47,7 @@ public class QuantityServiceMockito {
     }
 
     @Test
-    public void whenCalledForMainUnits1_ShouldReturnMainUnits() throws Exception {
+    public void whenCalledForSubUnits_ShouldReturnSubUnits() throws Exception {
         List<SubUnits> list = Arrays.asList(INCH, FEET);
         given(service.getSubUnits(LENGTH)).willReturn(list);
         mvc.perform(get("/units/LENGTH"))
