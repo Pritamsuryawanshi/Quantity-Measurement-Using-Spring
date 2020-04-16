@@ -1,5 +1,6 @@
 package com.quantitymeasurement.service;
 
+import com.quantitymeasurement.dto.ConvertDTO;
 import com.quantitymeasurement.enums.SubUnits;
 import com.quantitymeasurement.enums.Units;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,11 @@ public class QuantityService {
                 .filter(temp -> temp.mainUnit.equals(unit))
                 .collect(Collectors.toList());
         return subUnitsStream;
+    }
+
+    public double convert(ConvertDTO convertDTO) {
+        /*double conversion = convertDTO.value * convertDTO.base.value / convertDTO.target.value;
+        return conversion;*/
+        return 2.0;
     }
 }
