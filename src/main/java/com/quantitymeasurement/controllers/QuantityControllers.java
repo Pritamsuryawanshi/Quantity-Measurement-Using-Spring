@@ -26,7 +26,7 @@ public class QuantityControllers {
         return quantityService.getSubUnits(unit);
     }
 
-    @PostMapping(value = "/units/convert", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("/units/convert")
     public double getAllSubUnits(@RequestBody ConvertDTO convertDTO) {
         return quantityService.convert(convertDTO);
     }

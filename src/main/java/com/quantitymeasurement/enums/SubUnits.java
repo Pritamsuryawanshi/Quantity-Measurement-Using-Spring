@@ -9,7 +9,9 @@ public enum SubUnits {
     ML(1.0, Units.VOLUME),
 
     KG(1000.0, Units.WEIGHT), GRAM(1.0, Units.WEIGHT),
-    TONNE(1000000.0, Units.WEIGHT);
+    TONNE(1000000.0, Units.WEIGHT),
+
+    CELSIUS(1, Units.TEMPERATURE), FAHRENHEIT(1, Units.TEMPERATURE);
 
     public Units mainUnit;
     public double value;

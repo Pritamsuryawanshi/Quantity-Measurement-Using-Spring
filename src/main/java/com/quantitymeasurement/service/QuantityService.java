@@ -24,8 +24,7 @@ public class QuantityService {
     }
 
     public double convert(ConvertDTO convertDTO) {
-        /*double conversion = convertDTO.value * convertDTO.base.value / convertDTO.target.value;
-        return conversion;*/
-        return 2.0;
+        return convertDTO.base == SubUnits.FAHRENHEIT ? (convertDTO.value - 32) * 5 / 9 :
+                convertDTO.value * convertDTO.base.value / convertDTO.target.value;
     }
 }
